@@ -1,0 +1,29 @@
+{
+	"modinfoversion": 2,
+	"modlist": [
+		{
+			"authors": [
+				"immibis"
+			],
+			"credits": "",
+			"dependants": [],
+			"dependencies": [
+				"ImmibisCore"
+			],
+			"description": "A collection of blocks that are useful with BuildCraft or RedPower.",
+			"logoFile": "",
+			"mcversion": "1.4.6",
+			"modid": "Tubestuff",
+			"name": "Tubestuff",
+			"parent": "",
+			"requiredMods": [
+				"ImmibisCore"
+			],
+			"screenshots": [],
+			"updateUrl": "",
+			"url": "http://www.minecraftforum.net/topic/1001131-110-immibiss-mods-smp/",
+			"useDependencyInformation": "true",
+			"version": "52.3.2"
+		}
+	]
+}

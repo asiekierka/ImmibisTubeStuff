@@ -1,5 +1,6 @@
 package immibis.tubestuff;
 
+import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 import ic2.api.Ic2Recipes;
@@ -16,6 +17,7 @@ import immibis.core.api.porting.SidedProxy;
 import java.util.ArrayList;
 import java.util.List;
 
+import logisticspipes.proxy.SimpleServiceLocator;
 import org.lwjgl.LWJGLException;
 import org.lwjgl.opengl.Display;
 import org.lwjgl.opengl.PixelFormat;
@@ -204,6 +206,11 @@ public class TubeStuff extends PortableBaseMod implements IPacketMap, IGuiHandle
 		}
 
 		APILocator.getNetManager().listen(this);
+	}
+
+	@Mod.PostInit
+	public void postInit(FMLPostInitializationEvent evt) {
+		SimpleServiceLocator.addCraftingRecipeProvider(new AutoCraftingMk2CraftingRecipeProvider());
 	}
 
 	public static final boolean areItemsEqual(ItemStack recipe, ItemStack input)

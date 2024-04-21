@@ -28,6 +28,13 @@ repositories {
 			artifact()
 		}
 	}
+	flatDir {
+		dirs 'libs'
+
+		content {
+			includeGroup 'libs'
+		}
+	}
 }
 
 sourceSets {
@@ -45,6 +52,7 @@ dependencies {
 	modImplementation name: "buildcraft", version: "A-1.4.7-3.4.5", ext: "jar"
 	modImplementation name: "industrialcraft-2", version: "1.115.231-lf", ext: "jar"
 	modImplementation name: "immibis-core", version: "52.4.6a", ext: "jar"
+	modImplementation 'libs:LogisticsPipes'
 
 	modCompileOnly name: "CodeChickenCore", version: "0.8.1.6", ext: "jar"
 	modCompileOnly name: "NotEnoughItems", version: "1.4.7.4", ext: "jar"

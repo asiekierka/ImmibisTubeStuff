@@ -45,7 +45,7 @@ public class TileAutoCraftingMk2 extends TileBasicInventory implements ISidedInv
 	
 	// recipeInputs[slotNumber] = array of possible stacks to fill that slot
 	public ItemStack[][] recipeInputs = new ItemStack[9][0];
-	private IRecipe cachedRecipe;
+	protected IRecipe cachedRecipe;
 	private boolean invChanged = true;
 	private boolean recipeChanged = true;
 	private boolean outputFull = false;
